@@ -1,5 +1,7 @@
 import path from 'path'
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+
+const __dirname = import.meta.dirname
 
 export default {
     entry: './src/index.js',
