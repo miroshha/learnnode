@@ -2,6 +2,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 const __dirname = import.meta.dirname
+const name = 'Miron'
 
 export default {
     entry: './src/index.js',
@@ -50,7 +51,10 @@ export default {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.njk'
+            template: './src/index.njk',
+            templateParameters: {
+                name: name,
+            }
         }),
         new HtmlWebpackPlugin({
             template: './src/about.njk',

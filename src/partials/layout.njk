@@ -6,16 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    {% block nav %}
-    {% endblock %}
-      <div class="container">
-          {# {% block content %}
-          {% endblock %} #}
-      </div>
-      <footer class="block has-background-light">
-        <div class="container">
-            Some kind of footer
-        </div>
-      </footer>
+    {% include 'src/partials/nav.njk' %}
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include 'src/partials/footer.njk' %}
 </body>
 </html>
