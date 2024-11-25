@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "npx nodemon --watch webpack.config.js --exec \"webpack serve --mode development\""
+    "start": "npx nodemon --watch webpack.config.js --exec \"webpack serve --mode development\"",
+    "deploy": "npm run build && surge ./dist mgavva.surge.sh"
   },
   "type": "module",
   "keywords": [],
@@ -22,6 +23,7 @@
     "style-loader": "^4.0.0",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.1.0",
+    "surge": "^0.24.6"
   }
 }
